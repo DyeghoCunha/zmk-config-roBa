@@ -5,9 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&sk {
-    ignore-modifiers;
-};
+&sk { ignore-modifiers; };
 
 &mt {
     flavor = "balanced";
@@ -199,10 +197,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                        &kp T                                                        &kp Y      &kp U   &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F                        &kp G              &kp LS(LG(S))          &kp MINUS          &kp H      &kp J   &kp K      &kp L    &kp QMARK
-&kp Z      &kp X         &kp C         &kp V                        &kp B              &kp COLON              &kp SEMICOLON      &kp N      &kp M   &kp COMMA  &kp DOT  &kp SEMICOLON
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 5 INT_HENKAN  &mo 2              &qt LSHIFT SPACE       &kp SPACE          &sl 1                                  &kp DEL
+&kp Q      &kp W         &kp E         &kp R                        &kp T                                       &kp Y  &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F                        &kp G  &kp LS(LG(S))         &kp MINUS      &kp H  &kp J  &kp K      &kp L    &kp QMARK
+&kp Z      &kp X         &kp C         &kp V                        &kp B  &kp COLON             &kp SEMICOLON  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SEMICOLON
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &mo 2  &qt LSHIFT SPACE      &kp SPACE      &sl 1                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -211,50 +209,50 @@
         sym_layer {
             label = "Sym.";
             bindings = <
-&kp N1            &kp N2       &kp N3                 &kp NUMBER_4     &kp N5                                     &kp NUMBER_6  &kp N7           &kp N8             &kp N9     &kp N0
-&kp LESS_THAN     &kp AT_SIGN  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &trans      &trans      &kp EQUAL     &sk TILDE        &kp SINGLE_QUOTE   &kp PLUS   &kp ASTERISK
-&kp GREATER_THAN  &kp DOLLAR   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &trans      &trans      &kp PERCENT   &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp MINUS  &sk CARET
-&trans            &trans       &trans                 &trans           &mo 3              &mo 4       &trans      &trans                                                       &trans
+&kp N1            &kp N2       &kp N3                 &kp NUMBER_4     &kp N5                                 &kp NUMBER_6  &kp N7           &kp N8             &kp N9     &kp N0
+&kp LESS_THAN     &kp AT_SIGN  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &trans      &trans  &kp EQUAL     &sk TILDE        &kp SINGLE_QUOTE   &kp PLUS   &kp ASTERISK
+&kp GREATER_THAN  &kp DOLLAR   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &trans      &trans  &kp PERCENT   &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp MINUS  &sk CARET
+&trans            &trans       &trans                 &trans           &mo 3              &mo 4       &trans  &trans                                                       &trans
             >;
         };
 
         ext_layer {
             label = "Mods";
             bindings = <
-&kp ESC    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_PAUSE                          &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
-&sk LALT   &sk LGUI    &sk LSHIFT  &sk LCTRL   &kp RALT     &trans      &trans      &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)    &trans      &trans      &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
-&trans     &trans      &trans      &trans      &trans       &kp LCTRL   &kp ENTER   &mo 3                                        &trans
+&kp ESC    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_PAUSE                            &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
+&sk LALT   &sk LGUI    &sk LSHIFT  &sk LCTRL   &kp RALT     &trans         &trans     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
+&kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)    &trans         &trans     &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
+&trans     &trans      &trans      &trans      &trans       &kp LCTRL      &kp ENTER  &mo 3                                        &trans
             >;
         };
 
         fnc_layer {
             label = "FRow";
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4     &kp F5                            &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &trans      &trans      &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
-&none     &none     &none       &none      &none     &trans      &trans      &none    &none    &none            &none   &none
-&trans    &trans    &trans      &trans     &none     &none       &none       &none                                     &trans
+&kp F1    &kp F2    &kp F3      &kp F4     &kp F5                        &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &trans      &trans  &kp F11  &kp F12  &none   &trans  &trans
+&none     &none     &none       &none      &none     &trans      &trans  &none    &none    &none   &none   &none
+&trans    &trans    &trans      &trans     &none     &none       &none   &none                             &trans
             >;
         };
 
         symbols_2_layer {
             label = "Sym.2";
             bindings = <
-&none   &kp UNDERSCORE  &kp MINUS             &kp AMPERSAND  &kp POUND                       &none  &none  &none  &none  &none
-&none   &sk GRAVE       &kp NON_US_BACKSLASH  &kp PIPE       &kp SLASH  &trans      &trans   &none  &none  &none  &none  &none
-&none   &none           &none                 &none          &none      &trans      &trans   &none  &none  &none  &none  &none
-&trans  &trans          &trans                &trans         &none      &none       &none    &none                      &trans
+&none   &kp UNDERSCORE  &kp MINUS             &kp AMPERSAND  &kp POUND                      &none  &none  &none  &none  &none
+&none   &sk GRAVE       &kp NON_US_BACKSLASH  &kp PIPE       &kp SLASH  &trans      &trans  &none  &none  &none  &none  &none
+&none   &none           &none                 &none          &none      &trans      &trans  &none  &none  &none  &none  &none
+&trans  &trans          &trans                &trans         &none      &none       &none   &none                       &trans
             >;
         };
 
         settings_layer {
             label = "Sett.";
             bindings = <
-&bootloader  &none   &none   &bt BT_CLR  &bt BT_SEL 0                       &bt BT_SEL 3  &none  &unstick  &none  &bootloader
-&none        &none   &none   &none       &bt BT_SEL 1  &trans      &trans   &bt BT_SEL 4  &none  &none     &none  &none
-&none        &none   &none   &none       &bt BT_SEL 2  &trans      &trans   &bt BT_SEL 5  &none  &none     &none  &none
-&trans       &trans  &trans  &trans      &none         &none       &none    &none                                &trans
+&bootloader  &none   &none   &bt BT_CLR  &bt BT_SEL 0                      &bt BT_SEL 3  &none  &unstick  &none  &bootloader
+&none        &none   &none   &none       &bt BT_SEL 1  &trans      &trans  &bt BT_SEL 4  &none  &none     &none  &none
+&none        &none   &none   &none       &bt BT_SEL 2  &trans      &trans  &bt BT_SEL 5  &none  &none     &none  &none
+&trans       &trans  &trans  &trans      &none         &none       &none   &none                                 &trans
             >;
         };
 
